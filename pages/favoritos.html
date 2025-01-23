@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/globalstyle.css">
+    <link rel="stylesheet" href="../styles/favorites-style.css">
+
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="../assets/logo.png" alt="Logo Roteiros pelo Tejo"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a class="dropbtn">Destinos</a>
+        <div class="dropdown-content">
+          <a href="../pages/destinos/lisboa.html">Lisboa</a>
+          <a href="../pages/destinos/alentejo.html">Alentejo</a>
+          <a href="../pages/destinos/porto.html">Porto</a>
+          <a href="../pages/destinos/setubal.html">Setúbal</a>
+        </div>
+      </div>
+        
+      <div class="dropdown">
+        <a class="dropbtn">Roteiros</a>
+        <div class="dropdown-content">
+          <a href="../pages/roteiros/roteirosLisboa.html">Lisboa</a>
+          <a href="../pages/roteiros/roteirosAlentejo.html">Alentejo</a>
+          <a href="../pages/roteiros/roteirosPorto.html">Porto</a>
+          <a href="../pages/roteiros/roteirosSetubal.html">Setúbal</a>
+        </div>
+        </div>
+      <a href="sugestao.html">
+        Sugestões
+      </a>
+      <a href="favoritos.html">
+        Favoritos
+      </a>
+      <a href="sobreNos.html">
+        Sobre nós
+      </a>
+    </nav>
+
+    <button class="menubtn" onclick="openMenu();">
+      <img src="../assets/menuIcon.svg" alt="menu">
+    </button>
+  </header>
+    <main>
+      <section id="favoritos">
+        <h2>Roteiros Favoritos</h2>
+        <ul id="favorites-list">
+          <!--tag responsável por exibir uma mensagem quando não houver favoritos para serem exibidos. Ela é removida quando houver itens.-->
+          <p class="no-fav" style="font-size: 1.4rem;">Não há roteiros favoritos ainda.</p>
+          <!--items favoritos são inseridos aqui por meio do DOM ao serem armazenados no localStorage seguindo os comandos do arquivo favoritesController.js-->
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <img class="image-logo" src="../assets/logo-img.png" alt="Logo Roteiros pelo Tejo">
+        <img class="name-logo" src="../assets/logo-name.png" alt="Roteiros pelo Tejo">
+      </div>
+      <p>Roteiros pelo Tejo @2024 Todos os direitos reservados</p>
+    </footer>
+    
+    <!-- ligações com os arquivos js responsáveis pela interação da página-->
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/favoritesController.js"></script>
+</body>
+</html>

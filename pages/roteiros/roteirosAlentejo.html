@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--importação da família de icons necessária para o ícone de favorito-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>Roteiros: Alentejo</title>
+        <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles/globalstyle.css">
+        <link rel="stylesheet" href="../../styles/roteiros-style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html">
+                <img src="../../assets/logo.png" alt="Logo Roteiros pelo Tejo">
+            </a>
+            <nav>
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                  <a class="dropbtn">Destinos</a>
+                  <div class="dropdown-content">
+                    <a href="../destinos/lisboa.html">Lisboa</a>
+                    <a href="../destinos/alentejo.html">Alentejo</a>
+                    <a href="../destinos/porto.html">Porto</a>
+                    <a href="../destinos/setubal.html">Setúbal</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                  <a class="dropbtn">Roteiros</a>
+                  <div class="dropdown-content">
+                    <a href="./roteirosLisboa.html">Lisboa</a>
+                    <a href="./roteirosAlentejo.html">Alentejo</a>
+                    <a href="./roteirosPorto.html">Porto</a>
+                    <a href="./roteirosSetubal.html">Setúbal</a>
+                  </div>
+                </div>
+                <a href="../sugestao.html">Sugestões</a>
+                <a href="../favoritos.html">Favoritos</a>
+                <a href="../sobreNos.html">Sobre nós</a>
+            </nav>
+
+            <button class="menubtn" onclick="openMenu();">
+                <img src="../../assets/menuIcon.svg" alt="menu">
+            </button>
+        </header>
+        
+        <main>
+            <iframe
+            width="100%"
+            height="500px"
+            loading="lazy"
+            style="border:0; border-bottom: 4px solid var(--primary)"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJoZ0J5xlxGw0RP6BzpvKOepY&key=AIzaSyAOf7s9Il1DTlbv1wF-rX5NJybedR8hdaM"
+            ></iframe>
+            <article class="voteBody">
+                <section class="introduction">
+                    <h1 class="voteTitle">
+                        Roteiros do Alentejo
+                    </h1>
+                    <p class="voteText">
+                        Aqui, pode escolher entre dois roteiros incríveis para explorar o que Alentejo tem de melhor. Vote no seu favorito e ajude-nos a decidir o próximo destino em destaque. A sua opinião é importante – participe e inspire a sua próxima aventura!
+                    </p>
+                </section>
+                <section class="opts">
+                    <div class="opt-card">
+                        <div>
+                            <h2>
+                                Roteiro Histórico
+                            </h2>
+                            <!--botão responsável por adicionar e remover o roteiro dos favoritos do usuário com a utilização do addEventListener-->
+                            <button 
+                                type="button"
+                                class="favorite-button" 
+                                roteiro-name="Alentejo - Roteiro Histórico"
+                                roteiro-url="./roteiros/roteirosAlentejo.html"
+                            >
+                            <!--as propriedades roteiro-name e roteiro-url são criadas de forma personalizada para que a interação e exibição correta dos dados do roteiro favorito sejam possíveis-->
+                                <i class="material-icons">
+                                    favorite
+                                </i>
+                            </button>
+                        </div>
+                        <p>
+                            Explore a rica história e cultura do Alentejo, mergulhando nas suas tradições e monumentos:
+                        </p>
+                        <ol>
+                            <li>
+                                Café da manhã na Praça do Giraldo, Évora
+                            </li>
+            
+                            <li>
+                                Visita ao Templo Romano de Diana
+                            </li>
+            
+                            <li>
+                                Passeio pela Capela dos Ossos
+                            </li>
+            
+                            <li>
+                                Almoço com pratos típicos alentejanos
+                            </li>
+            
+                            <li>
+                                Degustação de vinhos numa adega local
+                            </li>
+            
+                            <li>
+                                Visita ao Castelo de Monsaraz
+                            </li>
+            
+                            <li>
+                                Pôr do sol com vista para o Alqueva
+                            </li>
+            
+                            <li>
+                                Jantar numa taberna tradicional
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="opt-card">
+                        <div>
+                            <h2>
+                                Roteiro Natural
+                            </h2>
+                            <button 
+                                type="button"
+                                class="favorite-button"
+                                roteiro-name="Alentejo - Roteiro Natural"
+                                roteiro-url="./roteiros/roteirosAlentejo.html"
+                            >
+                                <i class="material-icons"
+                                >favorite</i>
+                            </button>
+                        </div>
+                        <p>
+                            Descubra a tranquilidade e beleza natural do Alentejo, entre campos e paisagens deslumbrantes:
+                        </p>
+                        <ol>
+                            <li>
+                                Café da manhã numa herdade rural
+                            </li>
+            
+                            <li>
+                                Passeio pela planície alentejana
+                            </li>
+            
+                            <li>
+                                Visita ao Grande Lago do Alqueva
+                            </li>
+            
+                            <li>
+                                Almoço com produtos locais frescos
+                            </li>
+            
+                            <li>
+                                Caminhada pelas margens da Barragem
+                            </li>
+            
+                            <li>
+                                Parada numa aldeia típica, como Monsaraz
+                            </li>
+            
+                            <li>
+                                Degustação de azeites artesanais
+                            </li>
+            
+                            <li>
+                                Jantar sob o céu estrelado do Alentejo
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+            </article>
+            <div class="videowrapwrapper" >
+                <h3>Ainda está em dúvida? Confira:</h3>
+                <div class="videowrapper" >
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/fwtAAWZni54?si=YQ1sP_3Qui4rbten"
+                        title="video player"
+                        frameborder="0"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share
+                        "
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div>
+              <img class="image-logo" src="../../assets/logo-img.png" alt="Logo Roteiros pelo Tejo">
+              <img class="name-logo" src="../../assets/logo-name.png" alt="Roteiros pelo Tejo">
+            </div>
+            <p>Roteiros pelo Tejo @2024 Todos os direitos reservados</p>
+        </footer>
+
+        <script src="../../scripts/main.js"></script>
+        <script src="../../scripts/favoritesController.js"></script>
+    </body>
+</html>

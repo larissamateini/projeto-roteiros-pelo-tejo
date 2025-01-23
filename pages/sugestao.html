@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões de Roteiro</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/globalstyle.css">
+    <link rel="stylesheet" href="../styles/sugestoes-style.css">
+</head>
+
+<body>
+<header>
+  <a href="index.html"><img src="../assets/logo.png" alt="Logo Roteiros pelo Tejo"></a>
+  <nav>
+      <a href="./index.html">Home</a>
+      <div class="dropdown">
+        <a class="dropbtn">Destinos</a>
+        <div class="dropdown-content">
+          <a href="../pages/destinos/lisboa.html">Lisboa</a>
+          <a href="../pages/destinos/alentejo.html">Alentejo</a>
+          <a href="../pages/destinos/porto.html">Porto</a>
+          <a href="../pages/destinos/setubal.html">Setúbal</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <a class="dropbtn">Roteiros</a>
+        <div class="dropdown-content">
+          <a href="../pages/roteiros/roteirosLisboa.html">Lisboa</a>
+          <a href="../pages/roteiros/roteirosAlentejo.html">Alentejo</a>
+          <a href="../pages/roteiros/roteirosPorto.html">Porto</a>
+          <a href="../pages/roteiros/roteirosSetubal.html">Setúbal</a>
+        </div>
+      </div>
+      <a href="sugestao.html">Sugestões</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="sobreNos.html">Sobre nós</a>
+    </nav>
+
+    <button class="menubtn" onclick="openMenu();">
+      <img src="../assets/menuIcon.svg" alt="menu">
+    </button>
+  </header>
+
+  <main>
+    <form action="#" method="get" class="container" id="suggestaoForm"> 
+      <h2>Sugira um Roteiro</h2>
+
+      <div class="form-group">
+        <label for="nome">
+          Nome
+        </label>
+        <input 
+          type="text" 
+          id="nome" 
+          name="nome" 
+          placeholder="Nome completo" 
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="email">
+          Email
+        </label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="exemplo@email.com" 
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="sugestao">
+          Sugestão
+        </label>
+        <textarea  
+          name="sugestao" 
+          id="sugestao" 
+          rows="5" 
+          cols="20" 
+          placeholder="Escreva sua sugestão aqui" 
+          required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="credito">
+          Deseja ser creditado pelo roteiro criado?
+        </label>
+        <div class="radio_group">
+          
+            <div>
+              <label for="credito_sim">Sim</label>
+              <input type="radio" id="credito_sim" name="credito" value="sim" checked>
+            </div>
+          
+            <div>
+              <label for="credito_nao">Não</label>
+              <input type="radio" id="credito_nao" name="credito" value="nao">
+            </div>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button 
+          type="reset"
+          class="sugestoes-button"
+        >
+          Limpar
+        </button>
+        <button 
+          id="submit-button"
+          type="button"
+          class="sugestoes-button"
+        >
+          Enviar
+        </button>
+      </div>
+    </form>
+
+    <div class="container-suggestions">
+      <h2>Sugestões dos utilizadores</h2>
+      <section id="user-suggestions">
+        <!--tag responsável por mostrar uma mensagem enquanto não houver sugestões-->
+        <span class="no-suggestions">Não há sugestões ainda.</span>
+        <!--Os cards com as sugestões dos usuários armazenados no localStorage serão adicionados e exibidos aqui-->
+      </section> 
+    </div>
+
+  </main>
+    
+  <footer>
+    <div>
+      <img class="image-logo" src="../assets/logo-img.png" alt="Logo Roteiros pelo Tejo">
+      <img class="name-logo" src="../assets/logo-name.png" alt="Roteiros pelo Tejo">
+    </div>
+    <p>Roteiros pelo Tejo @2024 Todos os direitos reservados</p>
+  </footer>
+
+  <!-- ligações externas com os arquivos js responsáveis pela interação da página-->
+  <script src="../scripts/main.js"></script>
+  <script src="../scripts/suggestionsController.js"></script>
+</body>
+</html>

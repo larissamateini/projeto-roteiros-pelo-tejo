@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:wght@400..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>Roteiros pelo Tejo</title>
+  <!-- Links de ligação: favicon e dois estilos externos-->
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles/globalstyle.css">
+  <link rel="stylesheet" href="../styles/homestyle.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html"><img src="../assets/logo.png" alt="Logo Roteiros pelo Tejo"></a>
+    <nav>
+      <a href="./index.html">Home</a>
+      
+      <!-- Elemento responsável pelo menu suspenso -->
+      <div class="dropdown">
+        <a class="dropbtn">Destinos</a>
+        <div class="dropdown-content">
+          <a href="../pages/destinos/lisboa.html">Lisboa</a>
+          <a href="../pages/destinos/alentejo.html">Alentejo</a>
+          <a href="../pages/destinos/porto.html">Porto</a>
+          <a href="../pages/destinos/setubal.html">Setúbal</a>
+        </div>
+      </div>
+      
+      <div class="dropdown">
+        <a class="dropbtn">Roteiros</a>
+        <div class="dropdown-content">
+          <a href="../pages/roteiros/roteirosLisboa.html">Lisboa</a>
+          <a href="../pages/roteiros/roteirosAlentejo.html">Alentejo</a>
+          <a href="../pages/roteiros/roteirosPorto.html">Porto</a>
+          <a href="../pages/roteiros/roteirosSetubal.html">Setúbal</a>
+        </div>
+      </div>
+
+      <a href="sugestao.html">Sugestões</a>
+      <a href="favoritos.html">Favoritos</a>
+      <a href="sobreNos.html">Sobre nós</a>
+    </nav>
+
+    <!-- Botão com evento para chamar a função que abre o menu ao clicá-lo-->
+    <button class="menubtn" onclick="openMenu();">
+      <img src="../assets/menuIcon.svg" alt="Menu">
+    </button>
+  </header>
+  
+  <main>
+    <!-- div container do slider da homepage-->
+    <div id="slider">
+      <figure>
+        <img src="../assets/img.ilustration.jpg" alt="Ilustração de Portugal">
+        <img src="../assets/lisboaDestino.png" alt="Imagem de Lisboa">
+        <img src="../assets/porto.png" alt="Imagem de Porto">
+        <img src="../assets/setubal.png" alt="Imagem de Setúbal">
+      </figure>
+      <button>
+        <!-- Botão com link para interação no slider/banner-->
+        <a href="../pages/destinos/alentejo.html">Destino da semana</a>
+      </button>
+    </div>
+
+    <div class="container-arredondado">
+      <section class="section1">
+        <div class="text">
+          <h1>Portugal, um destino para todos</h1>
+          <p>
+             Viajar em Portugal é uma experiência única, marcada por paisagens deslumbrantes e uma rica diversidade cultural. A culinária saborosa, os vinhos de renome e a acolhedora hospitalidade dos portugueses tornam a viagem ainda mais memorável. Além disso, o clima ameno, a segurança e a infraestrutura acessível tornam esse país um destino ideal para viajantes de todas as idades e interesses. Nosso objetivo é guiar todos à uma experiência inesquecível!
+            </p>
+        </div>
+        <!-- a tag figure define uma área de imagens no site-->
+        <figure>
+          <img class="image principal" src="../assets/pt-lisboa1.jpg" alt="Vista de Lisboa">
+          <img class="image hover" src="../assets/lisboahover2.jpg" alt="Vista alternativa de Lisboa">
+        </figure>
+      </section>
+      </div>
+  
+      <div class="container-arredondado">
+      <section class="section2">
+        <div class="text">
+          <h1>Turismo sustentável?</h1>
+          <p>Portugal disponibiliza todos os meios para se viajar de forma sustentável, reduzindo o seu impacto ambiental. O uso de transportes públicos, como comboios e autocarros elétricos, facilita a locomoção pelas cidades e regiões de maneira eficiente e ecológica e, para quem prefere estar em contacto com a natureza, as caminhadas em trilhos pedestres são uma opção perfeita. Além disso, muitos alojamentos no país já têm adotado práticas sustentáveis, como o uso de energias renováveis e a redução de plásticos, oferecendo uma estadia mais consciente e alinhada com o turismo responsável.</p>
+        </div>
+  
+        <!-- animação imagens -->
+        <figure>
+          <img class="image principal" src="../assets/pt-lisboa2.jpg" alt="Vista de Lisboa">
+          <img class="image hover" src="../assets/lisboahover3.jpg" alt="Vista alternativa de Lisboa">
+        </figure>
+      </section>
+    </div>
+  
+    <section class="section3">
+      <div class="contact">
+        <h2>Contacte-nos</h2>
+        <p><span>Email:</span> roteiros@pelotejo.com </p>
+        <p><span>Tel:</span> +351 999 999999 </p>
+      </div>
+
+      <div class="follow">
+        <h2>Siga-nos</h2>
+        <p>
+          <span>Instagram:</span>
+          <a href="#">@roteirospelotejo</a>
+        </p>
+        <p>
+          <span>Facebook:</span>
+          <a href="#">Roteiros pelo Tejo</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+      <div>
+        <img class="image-logo" src="../assets/logo-img.png" alt="Logo Roteiros pelo Tejo">
+        <img class="name-logo" src="../assets/logo-name.png" alt="Roteiros pelo Tejo">
+      </div>
+      <p>Roteiros pelo Tejo @2024 Todos os direitos reservados</p>
+  </footer>
+
+  <!-- ligação externa com o arquivos js responsável pela interação da página-->
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

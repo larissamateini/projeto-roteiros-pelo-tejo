@@ -1,0 +1,128 @@
+/* Container Arredondado */
+.container-arredondado {
+  border-radius: 15px; /* Borda arredondada */
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 2rem auto 0; /* Centraliza */
+  width: 60%; /* Limita a largura */
+}
+
+.sobre-nos {
+  padding-bottom: 6rem;
+}
+
+.sobre-nos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin: 2rem 0;
+}
+
+/* Conteúdo da seção */
+.sobrenos-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  font-size: 1.2rem;
+  padding: 0 4rem;
+  margin: auto; /* Centraliza automaticamente o conteúdo */
+}
+
+/* Texto */
+.sobrenos-content p {
+  color: var(--black);
+  text-align: justify;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+.sobrenos-content p > b {
+  color: var(--primary);
+}
+
+/* Imagem */
+.sobrenos-content img {
+  max-width: 100%; /* Ajusta a largura máxima para 100% do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 15px; /* Borda arredondada */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.sobrenos-content img:hover {
+  filter: saturate(130%); /* Saturação ao passar o mouse */
+}
+
+/* Valores */
+.values {
+  max-width: 100%;
+  align-self: flex-start;
+  text-align: justify;
+}
+
+.values h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.values ul {
+  color: var(--black);
+  list-style: disc;
+  padding-left: 1.4rem; /* Posiciona a lista no canto esquerdo */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .sobrenos-content {
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .sobre-nos h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobrenos-content {
+    width: 100%;
+    font-size: 1rem;
+    gap: 2rem;
+  }
+
+  .sobre-nos h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1rem;
+  }
+
+  .values h3 {
+    font-size: 1.6rem;
+  }
+
+  .container-arredondado {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-arredondado {
+    max-width: 100%;
+    padding: 15px; /* Adicionando padding para consistência */
+  }
+
+  .sobrenos-content {
+    width: 100%; /* Ajuste de largura */
+    font-size: 1rem;
+    gap: 1.5rem;
+  }
+
+  .sobre-nos h2 {
+    font-size: 1.8rem;
+  }
+
+  .values ul {
+    padding-left: 1rem;
+  }
+}

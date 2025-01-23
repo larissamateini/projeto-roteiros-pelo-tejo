@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>Roteiros: Setúbal</title>
+        <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../../styles/globalstyle.css">
+        <link rel="stylesheet" href="../../styles/roteiros-style.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="../index.html"><img src="../../assets/logo.png" alt="Logo Roteiros pelo Tejo"></a>
+
+            <nav>
+                <a href="../index.html">Home</a>
+                <div class="dropdown">
+                  <a class="dropbtn">Destinos</a>
+                  <div class="dropdown-content">
+                    <a href="../destinos/lisboa.html">Lisboa</a>
+                    <a href="../destinos/alentejo.html">Alentejo</a>
+                    <a href="../destinos/porto.html">Porto</a>
+                    <a href="../destinos/setubal.html">Setúbal</a>
+                  </div>
+                </div>
+                
+                <div class="dropdown">
+                  <a class="dropbtn">Roteiros</a>
+                  <div class="dropdown-content">
+                    <a href="./roteirosLisboa.html">Lisboa</a>
+                    <a href="./roteirosAlentejo.html">Alentejo</a>
+                    <a href="./roteirosPorto.html">Porto</a>
+                    <a href="./roteirosSetubal.html">Setúbal</a>
+                  </div>
+                </div>
+                <a href="../sugestao.html">Sugestões</a>
+                <a href="../favoritos.html">Favoritos</a>
+                <a href="../sobreNos.html">Sobre nós</a>
+            </nav>
+
+            <button class="menubtn" onclick="openMenu();">
+                <img src="../../assets/menuIcon.svg" alt="menu">
+            </button>
+        </header>
+        
+        <main>
+            <iframe
+            width="100%"
+            height="500px"
+            loading="lazy"
+            style="border:0; border-bottom: 4px solid var(--primary)"
+            allowfullscreen
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJNXQCq_5CGQ0RVKq1m3Y_8p8&key=AIzaSyAOf7s9Il1DTlbv1wF-rX5NJybedR8hdaM"
+            ></iframe>
+            <article class="voteBody">
+                <section class="introduction">
+                    <h1 class="voteTitle">
+                        Roteiros de Setúbal
+                    </h1>
+                    <p class="voteText">
+                        Aqui, pode escolher entre dois roteiros incríveis para explorar o que Setúbal tem de melhor. Vote no seu favorito e ajude-nos a decidir o próximo destino em destaque. A sua opinião é importante – participe e inspire a sua próxima aventura!
+                    </p>
+                </section>
+                <section class="opts">
+                    <div class="opt-card">
+                        <div>
+                            <h2>
+                                Roteiro Tradicional
+                            </h2>
+                            <!--as proprieddes roteiro-name e roteiro-url são criadas para serem salvas em um objeto e enviadas para o localStorage, e assim serem acessadas e listadas na página de favoritos-->
+                            <button type="button"
+                                class="favorite-button"
+                                roteiro-name="Setúbal - Roteiro Tradicional"
+                                roteiro-url="./roteiros/roteirosSetubal.html"
+                            >
+                                <i class="material-icons">favorite</i>
+                            </button>
+                        </div>
+                        <p>
+                            Descubra o lado autêntico de Setúbal, repleto de cultura, sabores e paisagens incríveis:
+                        </p>
+                        <ol>
+                            <li>
+                                Café da manhã na Avenida Luísa Todi
+                            </li>
+                            <li>
+                                Visita ao Mercado do Livramento
+                            </li>
+                            <li>
+                                Passeio pela Serra da Arrábida
+                            </li>
+                            <li>
+                                Praia do Portinho da Arrábida
+                            </li>
+                            <li>
+                                Almoço com frutos do mar
+                            </li>
+                            <li>
+                                Passeio de barco pelo estuário do Sado
+                            </li>
+                            <li>
+                                Visita ao Castelo de São Filipe
+                            </li>
+                            <li>
+                                Jantar na Tróia ou retorno a Setúbal
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="opt-card">
+                        <div>
+                            <h2>
+                                Roteiro Natural
+                            </h2>
+                            <button type="button"
+                                class="favorite-button"
+                                roteiro-name="Setúbal - Roteiro Natural"
+                                roteiro-url="./roteiros/roteirosSetubal.html"
+                            >
+                                <i class="material-icons">favorite</i>
+                            </button>
+                        </div>
+                        <p>
+                            Explore as paisagens e a natureza únicas de Setúbal, num dia cheio de atividades ao ar livre:
+                        </p>
+                        <ol>
+                            <li>
+                                Café da manhã na Marina de Troia
+                            </li>
+                            <li>
+                                Passeio de barco para avistar golfinhos
+                            </li>
+                            <li>
+                                Caminhada na Serra da Arrábida
+                            </li>
+                            <li>
+                                Almoço na Praia do Creiro
+                            </li>
+                            <li>
+                                Mergulho no Portinho da Arrábida
+                            </li>
+            
+                            <li>
+                                Visita ao Castelo de São Filipe
+                            </li>
+                            <li>
+                                Degustação de Moscatel de Setúbal
+                            </li>
+                            <li>
+                                Jantar descontraído na praia
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+            </article>
+            <div class="videowrapwrapper" >
+                <h3>Ainda está em dúvida? Confira:</h3>
+                <div class="videowrapper" >
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/5yiPsRPm554?si=-fY7PaxAfIKJS4kt"
+                        title="video player"
+                        frameborder="0"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share
+                        "
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div>
+              <img class="image-logo" src="../../assets/logo-img.png" alt="Logo Roteiros pelo Tejo">
+              <img class="name-logo" src="../../assets/logo-name.png" alt="Roteiros pelo Tejo">
+            </div>
+            <p>Roteiros pelo Tejo @2024 Todos os direitos reservados</p>
+        </footer>
+
+        <script src="../../scripts/main.js"></script>
+        <script src="../../scripts/favoritesController.js"></script>
+    </body>
+</html>

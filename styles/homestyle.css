@@ -1,0 +1,357 @@
+/*banner interativo com slider*/
+#slider {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  filter: brightness(0.8);
+  transition: filter ease-in-out .5s;
+  border-bottom: 2px solid var(--primary);
+}
+
+#slider:hover {
+  /* define que ao passar o rato por cima, a imagem recebe um filtro*/
+  filter: brightness(0.9) saturate(130%);
+}
+
+#slider img {
+  /* define a proporção em que a imagem será exibida e como*/
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+#slider button {
+  /* o conteiner terá o tamanho para comportar o seu comteúdo*/
+  width: fit-content;
+  position: absolute; /* Garantir que o botão se sobreponha à imagem */
+  bottom: 3rem;
+  left: 50%;
+
+  font-family: var(--body_title);
+  font-size: 1.2rem;
+  background: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+
+  padding: 1.8rem;
+  border: none;
+  border-radius: .8rem;
+  
+  transform: translateX(-50%); /* Centra o botão horizontalmente */
+  transition: transform filter ease-out .5s;
+  z-index: 10; /* Garante que o botão fique acima da imagem */
+}
+
+#slider button:hover {
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+#slider button a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+/*section introdutória do site e do seu objetivo*/
+.section1,
+.section2,
+.section3 {
+  height: 480px;
+  display: flex;
+  gap: 6rem;
+  font-size: 1.2rem;
+  margin: 3rem;
+}
+
+.container-arredondado, .section3 {
+  width: 85%;
+  margin: 3rem auto;
+}
+
+section .text {
+  width: 50%;
+  height: auto;
+  display: flex; /*o flex ajuda na adaptabilidade do conteúdo da viewport*/
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  line-height: 1.8rem;
+  text-align: justify;
+}
+
+section .text h1 {
+  color: var(--primary);
+  font-family: var(--font_title);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+section figure {
+  width: 50%;
+  height: 100%;
+  border-radius: .8rem;
+  margin: 0;
+  overflow: hidden;
+}
+
+section figure .image {
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all .3s ease-out;
+
+  /*define proporcão da imagem e como será apresentada*/
+  /*aspect-ratio: 16/9;*/
+  object-fit: cover;
+}
+
+/*imagens se transformam ao haver um interação do cursor do usuário*/
+section figure .image:hover{
+  filter: hue-rotate(7deg) contrast(101%) saturate(140%);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/*section para contacto e redes sociais*/
+.section3 {
+  display: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  color: whitesmoke;
+  background-color: var(--primary);
+  padding: 2rem 4rem;
+  border-radius: .8rem;
+  margin: 0 auto 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section3 div {
+  width: 50%;
+
+  > h2 {
+    color: var(--secondary);
+    font-size: 1.6rem;
+  } 
+}
+
+.section3 div p {
+  font-size: 1.2rem;
+
+  > span {
+    letter-spacing: .1rem;
+    color: var(--secondary);
+    font-weight: 500;
+  }
+
+  > a {
+    text-decoration: none;
+    color: whitesmoke;
+
+    &:hover {
+      font-weight: 500;
+    }
+  }
+}
+
+/*Banner interativo slider*/
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }
+  
+  body { 
+    margin: 0; 
+  } 
+
+  div#slider { 
+    overflow: hidden; 
+  }
+
+  div#slider figure img { 
+    width: 20%; 
+    float: left; 
+  }
+
+  div#slider figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 15s slidy infinite; 
+  }
+
+  .container-arredondado {
+    border-radius: 15px;
+    padding: 1.6rem;
+    background-color: #f9f9f9; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+
+  /*Design responsivo*/
+  @media (max-width: 768px) {
+    .container-arredondado {
+      padding: 0;
+    }
+
+    .section1,
+    .section2 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      padding: 1.5rem;
+      height: auto; /* Permite que o container cresça conforme o conteúdo */
+    }
+
+    .section1 .text h1,
+    .section2 .text h1 {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+  
+    .section1 .text,
+    .section2 .text {
+      width: 90%; /* Texto ocupa a maior parte do espaço disponível */
+      font-size: 1.2rem;
+    }
+  
+    .section1 figure,
+    .section2 figure {
+      width: 90%;
+      height: auto;
+      max-height: 400px; /* Define um limite para a altura das imagens */
+    }
+  
+    .section1 figure img,
+    .section2 figure img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    #slider {
+      height: 500px; /* Aumenta a altura do slider em telas menores */
+    }
+  
+    #slider figure {
+      height: 100%; /* Garante que o conteúdo interno se ajuste */
+    }
+  
+    #slider img {
+      aspect-ratio: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .section3 {
+      text-align: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .section3 div {
+      width: 100%;
+    }
+  
+    .section3 h2 {
+      font-size: 1.4rem;
+    }
+  
+    .section3 p {
+      font-size: 1rem;
+    }
+    #slider button {
+      font-size: 1rem; /* Reduz o tamanho da fonte */
+      padding: 1rem 1.5rem; /* Menor espaçamento interno */
+      bottom: 2rem; /* Ajusta a posição vertical */
+      border-radius: 0.6rem; /* Mantém os cantos arredondados */
+    }
+  }
+  
+  @media (max-width: 425px) {
+    .section1,
+    .section2 {
+      gap: 1rem;
+      padding: 0rem;
+      margin: 1rem;
+    }
+
+    .section1 .text h1,
+    .section2 .text h1 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .section1 .text,
+    .section2 .text {
+      font-size: 0.95rem;
+    }
+  
+    .section1 figure,
+    .section2 figure {
+      height: auto;
+      max-height: 350px; /* Garante que as imagens sejam visíveis sem ocupar muito espaço */
+    }
+  
+    .section1 figure img,
+    .section2 figure img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    #slider {
+      height: 400px; /* Ajusta a altura do slider para maior visibilidade */
+    }
+
+    .container-arredondado {
+      padding: .8rem;
+    }
+  
+    .section3 {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1rem;
+      margin: 2.2rem;
+    }
+  
+    .section3 div h2 {
+      font-size: 1.2rem;
+    }
+  
+    .section3 div p {
+      margin-top: .8rem;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    #slider button {
+      font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte */
+      padding: 0.8rem 1.2rem; /* Espaçamento interno mais compacto */
+      bottom: 1.5rem; /* Botão mais próximo da borda inferior */
+      border-radius: 0.5rem; /* Cantos ligeiramente arredondados */
+    }
+  }
+  
